@@ -1,0 +1,13 @@
+version: "3.8"
+services: 
+  mysql: 
+    container_name: my_sql_db_cluster
+    image: mysql/mysql-server:latest
+    ports: 
+      - "3306:3306"
+    environment:
+      MYSQL_USER: "username"
+      MYSQL_PASSWORD: "password"
+      MYSQL_ROOT_PASSWORD: "pass"
+      MYSQL_DATABASE: "somedb"
+    command: --lower_case_table_names=1
